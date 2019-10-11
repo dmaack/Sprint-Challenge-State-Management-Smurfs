@@ -13,7 +13,7 @@ const SmurfList = props => {
             
 
             {props.smurfData.map(smurf => (
-                <Smurf name={smurf.name} age={smurf.age} height={smurf.height}/>
+                <Smurf name={smurf.name} age={smurf.age} height={smurf.height} />
             ))}
 
         </div>

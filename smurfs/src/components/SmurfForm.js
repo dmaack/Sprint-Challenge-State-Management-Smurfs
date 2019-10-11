@@ -67,7 +67,7 @@ const SmurfForm = props => {
                     value={smurf.height}
                 />
 
-                <button type='submit '>Add New Smurf</button>
+                <button type='submit '>Add</button>
             </form>
         </div>
     )

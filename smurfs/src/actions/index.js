@@ -28,7 +28,7 @@ export const createSmurf = ({name, age, height}) => dispatch => {
     .post('http://localhost:3333/smurfs', {
         name,
         age,
-        height
+        height,
     })
     .then(res => {
         console.log('this is the response from axios post request', res)
