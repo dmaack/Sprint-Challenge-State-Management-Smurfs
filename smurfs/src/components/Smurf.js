@@ -1,5 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import  image  from '../images/smurf.jpg'
 
 
 const Smurf = props => {
@@ -8,8 +9,11 @@ const Smurf = props => {
     if(!props) return <h2>Loadings Smurfs</h2>
 
     return (
-        <div>
-            <p>{props.name} {props.age} {props.height}</p>
+        <div className='smurf-container'>
+            <p className='name'>{props.name}</p>
+            <img width='150px' src={image} alt='smurf lawn knome'/>
+            <p><strong>Age: </strong>{props.age}</p> 
+            <p><strong>Height: </strong>{props.height}</p>
         </div>
     )
 }

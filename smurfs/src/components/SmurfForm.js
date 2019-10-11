@@ -34,8 +34,11 @@ const SmurfForm = props => {
     // }
 
     return (
-        <div>
+        <div className='form-container'>
+            
             <form onSubmit={handleSubmit}>
+                <h3>Add a new Smurf!</h3>
+                <br></br>
                 <label>Name</label>
                 <input
                     className='input'

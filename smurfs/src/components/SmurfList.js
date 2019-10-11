@@ -8,12 +8,15 @@ const SmurfList = props => {
 
     return (
         <div>
-            <h2>Smurf List</h2>
+            <h2>Your Smurf Village</h2>
+        <div className='list-container'>
+            
 
             {props.smurfData.map(smurf => (
                 <Smurf name={smurf.name} age={smurf.age} height={smurf.height}/>
             ))}
 
+        </div>
         </div>
     )
 }
