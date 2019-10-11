@@ -1,4 +1,4 @@
-import { START_SMURF_FETCHING, FETCH_SMURF_SUCCESS, FETCH_SMURF_FAILURE } from '../actions';
+import { START_SMURF_FETCHING, FETCH_SMURF_SUCCESS, FETCH_SMURF_FAILURE, CREATE_SMURF_SUCCESS, CREATE_SMURF_FAILURE} from '../actions';
 
 const initialState ={
     smurfData: [],
@@ -26,7 +26,20 @@ export const reducer = (state = initialState, action) => {
             return {
                  ...state,
                 isLoading: false,
-                error: 'Server Error'
+                error: action.payload
+            }
+        case CREATE_SMURF_SUCCESS:
+            return {
+                ...state,
+                smurfData: action.payload,
+                isLoading: false,
+                error: ''
+            }
+        case CREATE_SMURF_FAILURE:
+            return {
+                ...state,
+                isLoading: false,
+                error: action.payload
             }
         default:
             return state;
