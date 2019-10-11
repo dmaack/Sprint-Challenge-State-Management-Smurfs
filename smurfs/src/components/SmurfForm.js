@@ -1,11 +1,14 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
+import { fetchSmurfs } from '../actions';
 
 const SmurfForm = props => {
     console.log('these are the props from the Smurf Form', props)
 
+    useEffect(() => {
+        props.fetchSmurfs();
+    }, [])
 
-    
     return (
         <div>
             <form>
@@ -28,5 +31,5 @@ const mapsStateToProps = state => {
 }
 
 
-export default connect(mapsStateToProps, {})(SmurfForm);
+export default connect(mapsStateToProps, { fetchSmurfs })(SmurfForm);
 

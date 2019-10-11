@@ -18,8 +18,9 @@ export const reducer = (state = initialState, action) => {
         case FETCH_SMURF_SUCCESS:
             return {
                 ...state, //return state
-                    isLoading: false,
-                    error: ''
+                smurfData: action.payload,
+                isLoading: false,
+                error: ''
             }
         case FETCH_SMURF_FAILURE:
             return {
